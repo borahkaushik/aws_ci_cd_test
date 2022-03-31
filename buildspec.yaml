@@ -14,7 +14,7 @@ phases:
        python: 3.7
     commands:
      - echo "install step"
-     - install python3-pip
+     - install python3-pip -y
      - echo "python3-pip installed"
      - python3.7 -m pip install pip==21.0.1
      - yum install -y libpython3.7-dev
