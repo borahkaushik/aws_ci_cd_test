@@ -14,10 +14,10 @@ phases:
        python: 3.7
     commands:
      - echo "install step"
-     - apt-get update
-     - apt-get install python3-pip -y
+     - install python3-pip
+     - echo "python3-pip installed"
      - python3.7 -m pip install pip==21.0.1
-     - apt install -y libpython3.7-dev
+     - yum install -y libpython3.7-dev
   pre_build:
     commands:
       - echo "pre-build stage"
