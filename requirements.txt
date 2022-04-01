@@ -22,6 +22,3 @@ lxml==4.6.3
 pyarrow==4.0.1
 
 awswrangler==2.10.0
-
---find-links https://download.pytorch.org/whl/torch_stable.html
-torch==1.7.1+cpu
