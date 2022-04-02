@@ -21,9 +21,15 @@ phases:
      - python --version
   pre_build:
     commands:
-      - echo "pre-build stage"
+      - echo "pre-build stage started"
+      - echo "installing requirments.txt"
       - python3 -m pip install -r requirements.txt
+      - echo "requirments.txt installed successfully"
+      - echo "installing torch_requirment.txt"
+      - python3 -m pip install -r torch_requirment.txt
+      - echo "torch_requirment.txt installed successfully"
       - pip3 install -e .
+      - echo "pre-build stage finished"
   build:
     commands:
       - echo "build stage"
