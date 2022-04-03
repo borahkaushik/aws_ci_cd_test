@@ -20,7 +20,7 @@ phases:
      - yum install -y python3-devel
      - python --version
      - python -c "import struct;print( 8 * struct.calcsize('P'))"
-     - curl --proto -y '=https' --tlsv1.2 -sSf https://sh.rustup.rs | sh
+     - curl --proto '=https' --tlsv1.2 -sSf https://sh.rustup.rs | sh
      - pip3 install wheel
   pre_build:
     commands:
