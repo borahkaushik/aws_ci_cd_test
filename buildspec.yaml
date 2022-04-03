@@ -17,6 +17,7 @@ phases:
      - yum -y install python3-pip
      - echo "python3-pip installed"
      - python3 -m pip install pip
+     - pip install --upgrade pip
      - yum install -y python3-devel
      - python --version
      - python -c "import struct;print( 8 * struct.calcsize('P'))"
