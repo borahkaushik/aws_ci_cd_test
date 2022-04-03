@@ -20,7 +20,6 @@ phases:
      - yum install -y python3-devel
      - python --version
      - python -c "import struct;print( 8 * struct.calcsize('P'))"
-     - yum install build-essential -y
   pre_build:
     commands:
       - echo "pre-build stage started"
