@@ -20,6 +20,7 @@ phases:
      - yum install -y python3-devel
      - python --version
      - python -c "import struct;print( 8 * struct.calcsize('P'))"
+     - pip3 install setuptools-rust
   pre_build:
     commands:
       - echo "pre-build stage started"
