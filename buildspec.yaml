@@ -16,7 +16,7 @@ phases:
      - echo "install step"
      - yum -y install python3-pip
      - echo "python3-pip installed"
-     - python3 -m pip install pip==21.0.1
+     - python3 -m pip install pip
      - yum install -y python3-devel
      - python --version
   pre_build:
