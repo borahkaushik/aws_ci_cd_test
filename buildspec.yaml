@@ -17,14 +17,11 @@ phases:
      - yum -y install python3-pip
      - echo "python3-pip installed"
      - python3 -m pip install pip
-     - pip install --upgrade pip
      - yum install -y python3-devel
      - python --version
      - python -c "import struct;print( 8 * struct.calcsize('P'))"
-     - pip3 install setuptools-rust
      - curl https://sh.rustup.rs -sSf | sh -s -- -y --default-toolchain nightly
      - source $HOME/.cargo/env
-     - python3 -m pip install --upgrade pip setuptools wheel
   pre_build:
     commands:
       - echo "pre-build stage started"
