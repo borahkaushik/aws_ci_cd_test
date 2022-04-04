@@ -1,3 +1,5 @@
+awswrang==2.14.0
+
 pybind11==2.6.1
 --no-binary :all: nmslib==2.1.1
 
