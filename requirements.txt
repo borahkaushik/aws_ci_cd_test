@@ -18,6 +18,3 @@ pandas==1.1.4
 pyinstrument==3.4.2
 
 lxml==4.6.3
-
-cmake
-pyarrow==4.0.1
