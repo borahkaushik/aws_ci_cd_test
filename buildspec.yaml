@@ -24,6 +24,7 @@ phases:
      - pip3 install setuptools-rust
      - curl https://sh.rustup.rs -sSf | sh -s -- -y --default-toolchain nightly
      - source $HOME/.cargo/env
+     - python3 -m pip install --upgrade pip setuptools wheel
   pre_build:
     commands:
       - echo "pre-build stage started"
