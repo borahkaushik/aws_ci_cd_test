@@ -1,22 +1,22 @@
-awswrangler==2.14.0
+awswrangler
 
-pybind11==2.6.1
---no-binary :all: nmslib==2.1.1
+pybind11
+--no-binary :all: nmslib
 
-pyzmq==22.0.3
-PyYAML==5.4.1
+pyzmq
+PyYAML
 
-boto3==1.17.71
-boto3-stubs[s3,dynamodb]==1.17.71
+boto3
+boto3-stubs[s3,dynamodb]
 
-transformers==4.0.1
-tqdm==4.49.0
+transformers
+tqdm
 
-cython==0.29.21 
-networkx==2.5
+cython
+networkx
 
-pandas==1.1.4
+pandas
 
-pyinstrument==3.4.2
+pyinstrument
 
-lxml==4.6.3
+lxml
