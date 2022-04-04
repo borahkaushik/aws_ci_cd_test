@@ -19,4 +19,4 @@ pyinstrument==3.4.2
 
 lxml==4.6.3
 
-awswrangler==2.10.0
+awswrangler
