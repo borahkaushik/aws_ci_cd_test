@@ -15,6 +15,7 @@ phases:
     commands:
      - echo "install step"
      - yum -y install python3-pip
+     - pip install --upgrade pip
      - echo "python3-pip installed"
      - yum install -y python3-devel
      - python --version
