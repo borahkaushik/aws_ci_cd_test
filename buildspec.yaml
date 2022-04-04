@@ -33,6 +33,9 @@ phases:
       - echo "installing torch_requirment.txt"
       - python3 -m pip install -r torch_requirment.txt
       - echo "torch_requirment.txt installed successfully"
+      - echo "installing neuron_torch_requirement.txt"
+      - python3 -m pip install -r neuron_torch_requirement.txt
+      - echo "neuron_torch_requirement.txt installed successfully"
       - pip3 install -e .
       - echo "pre-build stage finished"
   build:
