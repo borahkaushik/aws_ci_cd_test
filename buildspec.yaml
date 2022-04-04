@@ -23,6 +23,7 @@ phases:
      - python -c "import struct;print( 8 * struct.calcsize('P'))"
      - pip3 install setuptools-rust
      - curl https://sh.rustup.rs -sSf | sh -s -- -y --default-toolchain nightly
+     - source $HOME/.cargo/env
   pre_build:
     commands:
       - echo "pre-build stage started"
