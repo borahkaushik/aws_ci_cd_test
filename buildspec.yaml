@@ -13,19 +13,20 @@ phases:
     runtime-versions:
        python: 3.8
     commands:
-     - echo "install step"
-     - yum -y install python3-pip
+     - apt-get update
+     - sudo apt install -y python3-pip
+     - apt install python3.8-venv
+     - python3 -m venv build-env
+     - source build-env/bin/activate
      - pip install --upgrade pip
-     - echo "python3-pip installed"
-     - yum install -y python3-devel
+     - sudo apt-get install -y  libxml2-dev libxslt-dev python-dev
      - python --version
      - python -c "import struct;print( 8 * struct.calcsize('P'))"
-     - pip3 install setuptools-rust
   pre_build:
     commands:
       - echo "pre-build stage started"
       - echo "installing requirments.txt"
-      - python3 -m pip install -r requirements.txt
+      - cat requirments.txt  | xargs -L 1 python3 -m pip install
       - echo "requirments.txt installed successfully"
       - echo "installing torch_requirment.txt"
       - python3 -m pip install -r torch_requirment.txt
@@ -33,7 +34,6 @@ phases:
       - echo "installing neuron_torch_requirement.txt"
       - python3 -m pip install -r neuron_torch_requirement.txt
       - echo "neuron_torch_requirement.txt installed successfully"
-      - pip3 install -e .
       - echo "pre-build stage finished"
   build:
     commands:
