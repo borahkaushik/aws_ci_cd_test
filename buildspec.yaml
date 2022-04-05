@@ -47,7 +47,7 @@ phases:
   #     - python setup.py sdist bdist_wheel
 artifacts:
   files:
-    - target/*
+    - target/release
   #name: $(date +%Y-%m-%d)
   #discard-paths: yes
   #base-directory: location
