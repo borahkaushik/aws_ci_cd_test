@@ -1,0 +1,59 @@
+version: 0.2
+
+#env:
+  #variables:
+     # key: "There are no variables"
+  #parameter-store:
+     # key: "There are no variables"
+
+phases:
+  install:
+    #If you use the Ubuntu standard image 2.0 or later, you must specify runtime-versions.
+    #If you specify runtime-versions and use an image other than Ubuntu standard image 2.0, the build fails.
+    runtime-versions:
+       python: 3.8
+    commands:
+     - echo "install step"
+     - yum -y install python3-pip
+     - pip install --upgrade pip
+     - echo "python3-pip installed"
+     - yum install -y python3-devel
+     - python --version
+     - python -c "import struct;print( 8 * struct.calcsize('P'))"
+     - pip3 install setuptools-rust
+  pre_build:
+    commands:
+      - echo "pre-build stage started"
+      - echo "installing requirments.txt"
+      - python3 -m pip install -r requirements.txt
+      - echo "requirments.txt installed successfully"
+      - echo "installing torch_requirment.txt"
+      - python3 -m pip install -r torch_requirment.txt
+      - echo "torch_requirment.txt installed successfully"
+      - echo "installing neuron_torch_requirement.txt"
+      - python3 -m pip install -r neuron_torch_requirement.txt
+      - echo "neuron_torch_requirement.txt installed successfully"
+      - pip3 install -e .
+      - echo "pre-build stage finished"
+  build:
+    commands:
+      - echo "build stage"
+  post_build:
+    commands:
+      - echo "post-build stage"
+  # build:
+  #   commands:
+  #     - pytest tests/unit/
+  #     - pytest tests/integration/ -rfs
+  # post_build:
+  #   commands:
+  #     - python setup.py sdist bdist_wheel
+artifacts:
+  files:
+    -'**/*'
+  #name: $(date +%Y-%m-%d)
+  #discard-paths: yes
+  #base-directory: location
+#cache:
+  #paths:
+    # - We don't currently cache anything
