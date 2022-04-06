@@ -18,18 +18,19 @@ phases:
      - pip install --upgrade pip
      - sudo apt-get install -y  libxml2-dev libxslt-dev python-dev
      - docker --version
-     - python --version
-     - python -c "import struct;print( 8 * struct.calcsize('P'))"
+#      - python --version
+#      - python -c "import struct;print( 8 * struct.calcsize('P'))"
+     - docker ps
   pre_build:
     commands:
-      - echo "pre-build stage started"
-      - echo "installing requirments.txt"
-      - cat requirements.txt  | xargs -L 1 python3 -m pip install
-      - echo "requirments.txt installed successfully"
-      - echo "installing neuron_torch_requirement.txt"
-      - python3 -m pip install -r neuron_torch_requirement.txt
-      - echo "neuron_torch_requirement.txt installed successfully"
-      - echo "pre-build stage finished"
+#       - echo "pre-build stage started"
+#       - echo "installing requirments.txt"
+#       - cat requirements.txt  | xargs -L 1 python3 -m pip install
+#       - echo "requirments.txt installed successfully"
+#       - echo "installing neuron_torch_requirement.txt"
+#       - python3 -m pip install -r neuron_torch_requirement.txt
+#       - echo "neuron_torch_requirement.txt installed successfully"
+#       - echo "pre-build stage finished"
   build:
     commands:
       - echo "build stage"
