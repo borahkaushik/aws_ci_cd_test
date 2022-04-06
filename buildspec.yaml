@@ -11,12 +11,12 @@ phases:
     #If you use the Ubuntu standard image 2.0 or later, you must specify runtime-versions.
     #If you specify runtime-versions and use an image other than Ubuntu standard image 2.0, the build fails.
     runtime-versions:
-       python: 3.8
+       docker: 20.10
     commands:
-     - apt-get update
-     - sudo apt install -y python3-pip
-     - pip install --upgrade pip
-     - sudo apt-get install -y  libxml2-dev libxslt-dev python-dev
+#      - apt-get update
+#      - sudo apt install -y python3-pip
+#      - pip install --upgrade pip
+#      - sudo apt-get install -y  libxml2-dev libxslt-dev python-dev
      - docker --version
 #      - python --version
 #      - python -c "import struct;print( 8 * struct.calcsize('P'))"
